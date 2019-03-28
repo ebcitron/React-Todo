@@ -25,7 +25,9 @@ class Todo extends React.Component {
     render() {
         return (
             <div >
-                <button className={`this.state.completed`} onClick={this.handleToggle}>{this.props.task}</button>
+                <button
+                      style={this.state.completed ? { textDecoration: 'line-through' } : null}
+                    onClick={this.handleToggle}>{this.props.task}</button>
             </div>
         );
     }
