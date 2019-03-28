@@ -22,9 +22,19 @@ class App extends React.Component {
     }
   }
 
-  addtodo = object => {
+
+
+  addToDo = todo => {
+    const copy = this.state.todos.slice();
+    copy.push(todo);
+    this.setState({ todos: copy });
     
-    
+  };
+
+  clearCompleted = e => {
+    if (this.state.completed === true) {
+      
+    }
   }
   
 
@@ -39,7 +49,7 @@ class App extends React.Component {
       <div>
         <h2>To Do List</h2>
         <TodoList todos={this.state.todos} /> 
-        <TodoForm />
+        <TodoForm addToDo={this.addToDo} todos={this.state.todos}/>
       </div>
     );
   }

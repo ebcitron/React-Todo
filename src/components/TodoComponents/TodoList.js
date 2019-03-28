@@ -8,7 +8,7 @@ const TodoList = props => {
     return (
         <div className='TodoList'>
             
-          
+       
             {props.todos.map(todo => {
                 return(
                 <div className='ATodo'>
